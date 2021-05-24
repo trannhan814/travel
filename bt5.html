@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let product = [{
+            name: "Xiaomi portable charger 20000 mah",
+            brand: "Xiaomi",
+            price: 428,
+            color: "White",
+            category: "Charger",
+        },
+        {
+            name: "VSmart Active 1",
+            brand: "VSmart",
+            price: 5487,
+            color: "Black",
+            category: "Phone",
+        },
+        {
+            name: "IPhone X",
+            brand: "Apple",
+            price: 21490,
+            color: "Gray",
+            category: "Phone",
+        },
+        {
+            name: "Samsung Galaxy A9",
+            brand: "Samsung",
+            price: 8490,
+            color: 'Blue',
+            category: "Phone",
+        },
+        ];
+
+        for (let i of product) {
+            if (i === product[0]) {
+                i.provider = "Phukienzero" + " Dientuccc";
+            } else {
+                i.provider = "TGDD";
+            }
+        }
+        let provider = prompt("Enter provider:").toLocaleUpperCase();
+        // for (let i = 0; i < product.length; i++) {
+        //     if (product[i].provider === provider) {
+        //         console.log("-----------------------");
+        //         console.table("Name: ", product[i].name);
+        //         console.table("Price: ", product[i].price);
+        //         console.table("Provider: ", product[i].provider);
+        //     }
+        // };
+
+        for (let i of product) {
+            if (i.provider === provider) {
+                console.log("-----------------------");
+                console.table("Name: ", i.name);
+                console.table("Price: ", i.price);
+                console.table("Provider: ", i.provider);
+            }
+        };
+    </script>
+</body>
+
+</html>
